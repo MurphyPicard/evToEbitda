@@ -21,8 +21,8 @@ function testApiPrice(){
     success: function(data){
 
       $('.divPrice').text('Success!');
-      $('.divChange').append('<br>' + data);
-      console.log(data);
+      $('.divPrice').append('<br>' + '$' + parseFloat(data[ 'Time Series (Daily)' ][ '2017-09-01' ][ '4. close' ]) );
+      console.log(data[ 'Time Series (Daily)' ][ '2017-09-01' ][ '4. close' ]);
 
     }//success
   });//ajax
