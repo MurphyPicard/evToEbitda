@@ -27,3 +27,6 @@ This will be a revolving project but to list a few -
 https://www.quandl.com/databases/ZFB?filterSelection=all&keyword=balance%20sheet
 
 https://www.alphavantage.co
+
+# Note
+Might need to enable/disable cors to play with the site while under construction.  
