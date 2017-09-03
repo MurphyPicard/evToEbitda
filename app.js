@@ -41,8 +41,8 @@ function testEV(){
     success: function(data){
 
       $('.divQ').text('Success!');
-      $('.divQ').append('<br>' + data );
-      console.log("This is data: " + data);
+      $('.divQ').append('<br>' + "Apple market cap in billions as of " + data.split(',')[13] + ": " + data.split(',')[15] );
+      console.log("This is data: " + data.split(","));
 
     }//success
   });//ajax
