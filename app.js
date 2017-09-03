@@ -27,3 +27,7 @@ function testApiPrice(){
     }//success
   });//ajax
 }//testApiPrice
+
+function testEV(){
+  console.log("nothing yet");
+}
