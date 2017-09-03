@@ -6,6 +6,7 @@ var quandlUrl = "";
 var quandlSample = "https://www.quandl.com/api/v3/datatables/ZACKS/MKTV.csv?api_key=SdCMPKwy6KCWooiBUaxq";
 
 var daily = "function=TIME_SERIES_DAILY";
+
 function testApi(){
 
   $.ajax({

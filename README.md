@@ -22,3 +22,8 @@ website fees.  They want a free site that is as good as a paid site!
 * Users should have access to common sense (why did the stock pop/drop today?)
 
 # Issues and Projects listed on respective tabs
+
+# Helpful sites:
+https://www.quandl.com/databases/ZFB?filterSelection=all&keyword=balance%20sheet
+
+https://www.alphavantage.co
