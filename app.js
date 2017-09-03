@@ -19,7 +19,7 @@ function testApi(){
   });//ajax
 
 }//testApi
-
+//////////////////////////////////////////////
 function testApiPrice(){
 
   $.ajax({
@@ -34,6 +34,16 @@ function testApiPrice(){
   });//ajax
 }//testApiPrice
 
+//////////////////////////////////////
 function testEV(){
-  console.log("nothing yet");
-}
+  $.ajax({
+    url: quandlSample,
+    success: function(data){
+
+      $('.divQ').text('Success!');
+      $('.divQ').append('<br>' + data );
+      console.log("This is data: " + data);
+
+    }//success
+  });//ajax
+}//testEV
