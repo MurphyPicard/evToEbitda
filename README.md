@@ -1,4 +1,4 @@
-# The Problem:
+# The Problem I want to solve:
 
 There are no free stock screeners that offer the best
 metric of all EV/EBITDA.  All the screeners that offer
@@ -9,7 +9,7 @@ website fees.  They want a free site that is as good as a paid site!
 
 
 
-- This will be a revolving project but to list a few -
+This will be a revolving project but to list a few -
 # User stories:
 * Users should be able to screen for stocks using common and not so common metrics for evaluating stocks.  
   * A minimum of 100 common metrics like P/E and Marketcap.
