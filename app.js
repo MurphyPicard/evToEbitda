@@ -1,10 +1,15 @@
-var apikey = "FJTIVZL1XTSG7F2E";
+var avApikey = "FJTIVZL1XTSG7F2E";
 var alphaVantageUrl = "https://www.alphavantage.co/query?";
+
+var quandlApiKey = "SdCMPKwy6KCWooiBUaxq";
+var quandlUrl = "";
+var quandlSample = "https://www.quandl.com/api/v3/datatables/ZACKS/MKTV.csv?api_key=SdCMPKwy6KCWooiBUaxq";
+
 var daily = "function=TIME_SERIES_DAILY";
 function testApi(){
 
   $.ajax({
-    url: alphaVantageUrl + daily + "&symbol=MSFT&interval=1min&apikey=" + apikey,
+    url: alphaVantageUrl + daily + "&symbol=MSFT&interval=1min&apikey=" + avApikey,
     success: function(data){
       $('.divChange').text('Success');
       $('.divChange').append('<br>' + data[ 'Meta Data' ][ '2. Symbol' ]);
@@ -17,7 +22,7 @@ function testApi(){
 function testApiPrice(){
 
   $.ajax({
-    url: alphaVantageUrl + daily + "&symbol=MSFT&interval=1min&apikey=" + apikey,
+    url: alphaVantageUrl + daily + "&symbol=MSFT&interval=1min&apikey=" + avApikey,
     success: function(data){
 
       $('.divPrice').text('Success!');
