@@ -1,31 +1,19 @@
 var avApikey = "FJTIVZL1XTSG7F2E";
 var alphaVantageUrl = "https://www.alphavantage.co/query?";
-
-var quandlApiKey = "SdCMPKwy6KCWooiBUaxq";
-var quandlUrl = "";
-var quandlSample = "https://www.quandl.com/api/v3/datatables/ZACKS/MKTV.csv?api_key=SdCMPKwy6KCWooiBUaxq";
-
 var daily = "function=TIME_SERIES_DAILY";
-
-// trying to get shares * price = market cap
-function testGPRO(){
-  $.ajax({
-    url: "https://www.quandl.com/api/v3/datatables/ZACKS/SHRS.json?ticker=FB&per_end_date=2015-09-30&qopts.columns=shares_out&api_key=SdCMPKwy6KCWooiBUaxq",
-    success: function(data){
-      console.log(data);
-    }
-  });
-}
-///////////////////////////////////////////
+var intraday = "function=TIME_SERIES_INTRADAY";
 
 function testApi(){
 
   $.ajax({
-    url: alphaVantageUrl + daily + "&symbol=MSFT&interval=1min&apikey=" + avApikey,
+    url: alphaVantageUrl + intraday + "&symbol=MSFT&interval=1min&apikey=" + avApikey,
     success: function(data){
       $('.divChange').text('Success');
       $('.divChange').append('<br>' + data[ 'Meta Data' ][ '2. Symbol' ]);
+      console.log(data);
+      console.log(data[ 'Meta Data' ]);
       console.log(data[ 'Meta Data' ][ '2. Symbol' ]);
+      console.log(data[ 'Meta Data' ][ "3. Last Refreshed" ]);
     }
   });//ajax
 
@@ -45,6 +33,19 @@ function testApiPrice(){
   });//ajax
 }//testApiPrice
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var quandlApiKey = "SdCMPKwy6KCWooiBUaxq";
+var quandlUrl = "";
+var quandlSample = "https://www.quandl.com/api/v3/datatables/ZACKS/MKTV.csv?api_key=SdCMPKwy6KCWooiBUaxq";
+
+
+
+
+
+
 //////////////////////////////////////
 function testQuandl(){
   $.ajax({
@@ -60,3 +61,14 @@ function testQuandl(){
     }//success
   });//ajax
 }//testEV
+
+// trying to get shares * price = market cap
+function testGPRO(){
+  $.ajax({
+    url: "https://www.quandl.com/api/v3/datatables/ZACKS/SHRS.json?ticker=GPRO&per_end_date=2017-08-30&qopts.columns=shares_out&api_key=SdCMPKwy6KCWooiBUaxq",
+    success: function(data){
+      console.log(data);
+    }
+  });
+}
+///////////////////////////////////////////
