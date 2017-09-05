@@ -49,6 +49,27 @@ function testApiPrice(){
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var https = require('https');
+var intrinioUsername = config.intrinioUsername;
+var intrinioPassword = config.intrinioPassword;
+var auth = "Basic " + new Buffer(intrinioUsername + ':' + intrinioPassword).toString('base64');
+
+var intrinioUrl = 'https://api.intrinio.com';
+
+
+function shareCount(){
+  $.ajax({
+    url: intrinioUrl,
+    success: (data)=>{
+      console.log("data below");
+      console.log(data);
+    }//success
+  });//ajax
+}//shareCount
+
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var quandlApiKey = config.quandlApiKey;
