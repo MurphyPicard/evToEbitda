@@ -28,5 +28,6 @@ https://www.quandl.com/databases/ZFB?filterSelection=all&keyword=balance%20sheet
 
 https://www.alphavantage.co
 
-# Note
-Might need to enable/disable cors to play with the site while under construction.  
+# Notes
+* Might need to enable/disable cors to play with the site while under construction.  
+* I am hiding my intrinio apikey and future api keys in a config.js file.  
