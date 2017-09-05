@@ -37,12 +37,17 @@ function testApiPrice(){
 //////////////////////////////////////
 function testEV(){
   $.ajax({
-    url: quandlSample,
+    url: "https://www.quandl.com/api/v3/datatables/ZACKS/FC.json?ticker=AAPL&per_type=Q&per_end_date.gte=2010-01-01&qopts.columns=per_end_date,tot_revnu&api_key=SdCMPKwy6KCWooiBUaxq",
     success: function(data){
 
       $('.divQ').text('Success!');
-      $('.divQ').append('<br>' + "Apple market cap in billions as of " + data.split(',')[13] + ": " + data.split(',')[15] );
-      console.log("This is data: " + data.split(","));
+      // $('.divQ').append('<br>' + "Apple market cap in billions as of " + data.split(',')[13] + ": " + data.split(',')[15] );
+      $('.divQ').append('<br>On ' + data.datatable.data[7][0] + ' Apple made ' + data.datatable.data[7][1] + ' (revenue in millions)' );
+      console.log("This is data: ");
+      console.log(data.datatable.data[7][0]);
+      console.log(data.datatable.data[7][1]);
+
+      console.log('hi');
 
     }//success
   });//ajax
