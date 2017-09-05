@@ -8,12 +8,18 @@ function testApi(){
   $.ajax({
     url: alphaVantageUrl + intraday + "&symbol=MSFT&interval=1min&apikey=" + avApikey,
     success: function(data){
-      $('.divChange').text('Success');
-      $('.divChange').append('<br>' + data[ 'Meta Data' ][ '2. Symbol' ]);
+      var recentDate = data[ 'Meta Data' ][ "3. Last Refreshed" ];
+
+      $('.divChange').text('Success! Working 100%!!!');
+      $('.divChange').append('<br>' + "Symbol: " + data[ 'Meta Data' ][ '2. Symbol' ]);
       console.log(data);
       console.log(data[ 'Meta Data' ]);
       console.log(data[ 'Meta Data' ][ '2. Symbol' ]);
       console.log(data[ 'Meta Data' ][ "3. Last Refreshed" ]);
+      console.log(data[ 'Time Series (1min)' ][recentDate][ '3. low' ]);
+      console.log(data[ 'Time Series (1min)' ][recentDate][ '4. close' ]);
+
+
     }
   });//ajax
 
@@ -22,12 +28,18 @@ function testApi(){
 function testApiPrice(){
 
   $.ajax({
-    url: alphaVantageUrl + daily + "&symbol=MSFT&interval=1min&apikey=" + avApikey,
+    url: alphaVantageUrl + intraday + "&symbol=MSFT&interval=1min&apikey=" + avApikey,
     success: function(data){
+      var recentDate = data[ 'Meta Data' ][ "3. Last Refreshed" ];
+      $('.divPrice').text('Success! Working 100%!!!');
+      $('.divPrice').append('<br>' + '$' + parseFloat(data[ 'Time Series (1min)' ][recentDate][ '4. close' ]) );
+      console.log(data);
+      console.log(data[ 'Meta Data' ]);
+      console.log(data[ 'Meta Data' ][ '2. Symbol' ]);
+      console.log(data[ 'Meta Data' ][ "3. Last Refreshed" ]);
+      console.log(data[ 'Time Series (1min)' ][recentDate][ '3. low' ]);
+      console.log(data[ 'Time Series (1min)' ][recentDate][ '4. close' ]);
 
-      $('.divPrice').text('Success!');
-      $('.divPrice').append('<br>' + '$' + parseFloat(data[ 'Time Series (Daily)' ][ '2017-09-01' ][ '4. close' ]) );
-      console.log(data[ 'Time Series (Daily)' ][ '2017-09-01' ][ '4. close' ]);
 
     }//success
   });//ajax
