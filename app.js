@@ -7,6 +7,17 @@ var quandlSample = "https://www.quandl.com/api/v3/datatables/ZACKS/MKTV.csv?api_
 
 var daily = "function=TIME_SERIES_DAILY";
 
+// trying to get shares * price = market cap
+function testGPRO(){
+  $.ajax({
+    url: "https://www.quandl.com/api/v3/datatables/ZACKS/SHRS.json?ticker=FB&per_end_date=2015-09-30&qopts.columns=shares_out&api_key=SdCMPKwy6KCWooiBUaxq",
+    success: function(data){
+      console.log(data);
+    }
+  });
+}
+///////////////////////////////////////////
+
 function testApi(){
 
   $.ajax({
@@ -35,7 +46,7 @@ function testApiPrice(){
 }//testApiPrice
 
 //////////////////////////////////////
-function testEV(){
+function testQuandl(){
   $.ajax({
     url: "https://www.quandl.com/api/v3/datatables/ZACKS/FC.json?ticker=AAPL&per_type=Q&per_end_date.gte=2010-01-01&qopts.columns=per_end_date,tot_revnu&api_key=SdCMPKwy6KCWooiBUaxq",
     success: function(data){
@@ -43,11 +54,8 @@ function testEV(){
       $('.divQ').text('Success!');
       // $('.divQ').append('<br>' + "Apple market cap in billions as of " + data.split(',')[13] + ": " + data.split(',')[15] );
       $('.divQ').append('<br>On ' + data.datatable.data[7][0] + ' Apple made ' + data.datatable.data[7][1] + ' (revenue in millions)' );
-      console.log("This is data: ");
       console.log(data.datatable.data[7][0]);
       console.log(data.datatable.data[7][1]);
-
-      console.log('hi');
 
     }//success
   });//ajax
