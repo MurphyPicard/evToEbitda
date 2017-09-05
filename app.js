@@ -1,4 +1,6 @@
-var avApikey = "FJTIVZL1XTSG7F2E";
+var avApikey = config.avApikey;
+// var mykey = config.MY_KEY;
+// var secretkey = config.SECRET_KEY;
 var alphaVantageUrl = "https://www.alphavantage.co/query?";
 var daily = "function=TIME_SERIES_DAILY";
 var intraday = "function=TIME_SERIES_INTRADAY";
@@ -49,7 +51,7 @@ function testApiPrice(){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var quandlApiKey = "SdCMPKwy6KCWooiBUaxq";
+var quandlApiKey = config.quandlApiKey;
 var quandlUrl = "";
 var quandlSample = "https://www.quandl.com/api/v3/datatables/ZACKS/MKTV.csv?api_key=SdCMPKwy6KCWooiBUaxq";
 
