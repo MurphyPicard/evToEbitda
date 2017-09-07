@@ -1,14 +1,8 @@
 # The Problem I want to solve:
 
-There are no free stock screeners that offer the best metric of all -
+There are no free stock screeners that offer the best metric of all
+# EV / EBITDA
 
-___________    ____         ___    _______ .______    __  .___________. _______       ___      
-|   ____\   \  /   /        /  /   |   ____||   _  \  |  | |           ||       \     /   \     
-|  |__   \   \/   /        /  /    |  |__   |  |_)  | |  | `---|  |----`|  .--.  |   /  ^  \    
-|   __|   \      /        /  /     |   __|  |   _  <  |  |     |  |     |  |  |  |  /  /_\  \   
-|  |____   \    /        /  /      |  |____ |  |_)  | |  |     |  |     |  '--'  | /  _____  \  
-|_______|   \__/        /__/       |_______||______/  |__|     |__|     |_______/ /__/     \__\
-                                                                                                 
 
 All the screeners that offer advanced info, like FASTgraphs and
 GURUfocus, charge high fees.  Wonderful sites, but too pricey for the
@@ -17,11 +11,11 @@ on website fees.
 
 Sites like the Motley Fool and Seeking Alpha are terrific for what they
 are but offer terrible stock screeners.  Fidelity offers a plethora of
-information and an ok Stock screener but you have to have an account
+information and an okay Stock screener but you have to have an account
 there and their screener doesn't offer some more advanced metrics.  
 The site GURUfocus offers a terrific screener that does offer the
-EV/EBITDA ratio but their site costs hundreds to thousands of dollars
-per year.
+EV/EBITDA ratio and many other related ratios but their site costs hundreds to 
+thousands of dollars per year.
 
 
 # The Solution:
