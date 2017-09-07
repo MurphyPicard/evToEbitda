@@ -14,7 +14,7 @@ are but offer terrible stock screeners.  Fidelity offers a plethora of
 information and an okay Stock screener but you have to have an account
 there and their screener doesn't offer some more advanced metrics.  
 The site GURUfocus offers a terrific screener that does offer the
-EV/EBITDA ratio and many other related ratios but their site costs hundreds to 
+EV/EBITDA ratio and many other related ratios but their site costs hundreds to
 thousands of dollars per year.
 
 
@@ -23,6 +23,10 @@ Users want a free site that is as good as a paid sites!  My team and
 I can build a simple stock screener that offers a simple to use design
 with both basic and advanced ratios.  This is easy to do and we can
 offer it for free!  
+
+Please see the GURUfocus site for an example of what I'd like to do.
+https://www.gurufocus.com/screener/#&tab=9&page=1&sort=&dir=&stab=-
+Click on the valuation tab to see where they use EV and EBITDA in their screeners.
 
 
 
