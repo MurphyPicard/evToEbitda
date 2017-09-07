@@ -1,7 +1,14 @@
 # The Problem I want to solve:
 
 There are no free stock screeners that offer the best metric of all -
-#            ---------- EV / EBITDA -----------  
+
+___________    ____         ___    _______ .______    __  .___________. _______       ___      
+|   ____\   \  /   /        /  /   |   ____||   _  \  |  | |           ||       \     /   \     
+|  |__   \   \/   /        /  /    |  |__   |  |_)  | |  | `---|  |----`|  .--.  |   /  ^  \    
+|   __|   \      /        /  /     |   __|  |   _  <  |  |     |  |     |  |  |  |  /  /_\  \   
+|  |____   \    /        /  /      |  |____ |  |_)  | |  |     |  |     |  '--'  | /  _____  \  
+|_______|   \__/        /__/       |_______||______/  |__|     |__|     |_______/ /__/     \__\
+                                                                                                 
 
 All the screeners that offer advanced info, like FASTgraphs and
 GURUfocus, charge high fees.  Wonderful sites, but too pricey for the
