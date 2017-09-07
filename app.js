@@ -49,17 +49,18 @@ function testApiPrice(){
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var https = require('https');
+// var https = require('https');
 var intrinioUsername = config.intrinioUsername;
 var intrinioPassword = config.intrinioPassword;
-var auth = "Basic " + new Buffer(intrinioUsername + ':' + intrinioPassword).toString('base64');
+var auth = "Basic " + intrinioUsername + ':' + intrinioPassword;
 
 var intrinioUrl = 'https://api.intrinio.com';
 
 
 function shareCount(){
   $.ajax({
-    url: intrinioUrl,
+    url: intrinioUrl + '/companies?ticker=FB',
+    headers: {'Authorization': auth},
     success: (data)=>{
       console.log("data below");
       console.log(data);
