@@ -52,18 +52,15 @@ function testApiPrice(){
 // var https = require('https');
 var intrinioUsername = config.intrinioUsername;
 var intrinioPassword = config.intrinioPassword;
-var auth = "Basic " + intrinioUsername + ':' + intrinioPassword;
+var auth = "Basic " + btoa(intrinioUsername + ":" + intrinioPassword);
 //https://api.intrinio.com/fundamentals/standardized?identifier={symbol}&statement={statement}
 
-
 var intrinioUrl = 'https://api.intrinio.com/fundamentals/standardized?identifier=FB&statement=income_statement';
-
-
 
 function shareCount(){
   $.ajax({
     beforeSend: function (xhr) {
-        xhr.setRequestHeader ("Authorization", "Basic " + btoa(intrinioUsername + ":" + intrinioPassword));
+        xhr.setRequestHeader ("Authorization", auth);
     },
     url: intrinioUrl,
     success: (data)=>{
