@@ -6,7 +6,6 @@ var daily = "function=TIME_SERIES_DAILY";
 var intraday = "function=TIME_SERIES_INTRADAY";
 
 function testApi(){
-
   $.ajax({
     url: alphaVantageUrl + intraday + "&symbol=MSFT&interval=1min&apikey=" + avApikey,
     success: function(data){
@@ -20,15 +19,11 @@ function testApi(){
       console.log(data[ 'Meta Data' ][ "3. Last Refreshed" ]);
       console.log(data[ 'Time Series (1min)' ][recentDate][ '3. low' ]);
       console.log(data[ 'Time Series (1min)' ][recentDate][ '4. close' ]);
-
-
     }
   });//ajax
-
 }//testApi
 //////////////////////////////////////////////
 function testApiPrice(){
-
   $.ajax({
     url: alphaVantageUrl + intraday + "&symbol=MSFT&interval=1min&apikey=" + avApikey,
     success: function(data){
@@ -41,26 +36,20 @@ function testApiPrice(){
       console.log(data[ 'Meta Data' ][ "3. Last Refreshed" ]);
       console.log(data[ 'Time Series (1min)' ][recentDate][ '3. low' ]);
       console.log(data[ 'Time Series (1min)' ][recentDate][ '4. close' ]);
-
-
     }//success
   });//ajax
 }//testApiPrice
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // var https = require('https');
-var intrinioUsername = config.intrinioUsername;
-var intrinioPassword = config.intrinioPassword;
+var intrinioUsername = config.intrinioUsername; // stored in the config.js file
+var intrinioPassword = config.intrinioPassword; // stored in the config.js file
 var auth = "Basic " + btoa(intrinioUsername + ":" + intrinioPassword);
-//https://api.intrinio.com/fundamentals/standardized?identifier={symbol}&statement={statement}
-
 var intrinioUrl = 'https://api.intrinio.com/fundamentals/standardized?identifier=FB&statement=income_statement';
 
 function shareCount(){
   $.ajax({
     beforeSend: function (xhr) {
-        xhr.setRequestHeader ("Authorization", auth);
+        xhr.setRequestHeader ("Authorization", auth);// the intrinio api uses this instead of an apiKey
     },
     url: intrinioUrl,
     success: (data)=>{
@@ -69,22 +58,12 @@ function shareCount(){
     }//success
   });//ajax
 }//shareCount
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var quandlApiKey = config.quandlApiKey;
+var quandlApiKey = config.quandlApiKey; // stored in the config.js file
 var quandlUrl = "";
 var quandlSample = "https://www.quandl.com/api/v3/datatables/ZACKS/MKTV.csv?api_key=SdCMPKwy6KCWooiBUaxq";
 
-
-
-
-
-
-//////////////////////////////////////
 function testQuandl(){
   $.ajax({
     url: "https://www.quandl.com/api/v3/datatables/ZACKS/FC.json?ticker=AAPL&per_type=Q&per_end_date.gte=2010-01-01&qopts.columns=per_end_date,tot_revnu&api_key=SdCMPKwy6KCWooiBUaxq",
@@ -99,7 +78,7 @@ function testQuandl(){
     }//success
   });//ajax
 }//testEV
-
+//////////////////////////////////////
 // trying to get shares * price = market cap
 function testGPRO(){
   $.ajax({
