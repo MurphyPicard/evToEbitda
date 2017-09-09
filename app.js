@@ -43,7 +43,7 @@ function testApiPrice(){
 // var https = require('https');
 var intrinioUsername = config.intrinioUsername; // stored in the config.js file
 var intrinioPassword = config.intrinioPassword; // stored in the config.js file
-var auth = "Basic " + btoa(intrinioUsername + ":" + intrinioPassword);
+var auth = "Basic " + btoa(intrinioUsername + ":" + intrinioPassword); // instead of apikey
 var intrinioUrl = 'https://api.intrinio.com/fundamentals/standardized?identifier=FB&statement=income_statement';
 
 function shareCount(){
@@ -61,7 +61,6 @@ function shareCount(){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var quandlApiKey = config.quandlApiKey; // stored in the config.js file
-var quandlUrl = "";
 var quandlSample = "https://www.quandl.com/api/v3/datatables/ZACKS/MKTV.csv?api_key=SdCMPKwy6KCWooiBUaxq";
 
 function testQuandl(){
@@ -80,12 +79,12 @@ function testQuandl(){
 }//testEV
 //////////////////////////////////////
 // trying to get shares * price = market cap
-function testGPRO(){
-  $.ajax({
-    url: "https://www.quandl.com/api/v3/datatables/ZACKS/SHRS.json?ticker=GPRO&per_end_date=2017-08-30&qopts.columns=shares_out&api_key=SdCMPKwy6KCWooiBUaxq",
-    success: function(data){
-      console.log(data);
-    }
-  });
-}
+// function testGPRO(){
+//   $.ajax({
+//     url: "https://www.quandl.com/api/v3/datatables/ZACKS/SHRS.json?ticker=GPRO&per_end_date=2017-08-30&qopts.columns=shares_out&api_key=SdCMPKwy6KCWooiBUaxq",
+//     success: function(data){
+//       console.log(data);
+//     }
+//   });
+// }
 ///////////////////////////////////////////
