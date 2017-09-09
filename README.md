@@ -57,4 +57,7 @@ https://www.alphavantage.co
 
 # Notes
 * Might need to enable/disable cors to play with the site while under construction.  
-* I am hiding my intrinio apikey and future api keys in a config.js file.  
+* I am hiding my intrinio apikey and future api keys in a config.js file.
+
+# MVP
+Very simply, we want one select dropdown (EV/EBITDA) to show on screen and display the results of that screen in a pleasant to look at format 

@@ -88,3 +88,6 @@ function testQuandl(){
 //   });
 // }
 ///////////////////////////////////////////
+
+// xignite example
+// var xIgniteURL = "https://factsetfundamentals.xignite.com/xFactSetFundamentals.json/GetBalanceSheets?IdentifierType=Symbol&Identifiers=FB&AsOfDate=9/8/2017&ReportType=Quarterly&ExcludeRestated=False&UpdatedSince="
