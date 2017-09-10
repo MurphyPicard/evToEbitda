@@ -57,7 +57,7 @@ common metrics for evaluating stocks.
 
 # Issues and Projects listed on respective tabs
 
-# Helpful sites:
+# Helpful APIs:
 https://www.quandl.com/databases/ZFB?filterSelection=all&keyword=balance%20sheet
 
 https://www.alphavantage.co
