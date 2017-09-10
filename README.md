@@ -1,6 +1,6 @@
 # The Problem I want to solve:
 
-There are no free stock screeners that offer the best metric of all
+There are no free stock screeners that offer the best metric of all...
 # EV / EBITDA
 
 
@@ -33,14 +33,16 @@ Click on the valuation tab to see where they use EV and EBITDA in their screener
 
 
 This will be a revolving project but to list a few -
-# Initial user stories - Most Important:
+# Initial user stories - Target 9/23/17
 * First, users should be able to screen for stocks using the EV/EBITDA metric.
 
-# Future version stories:
+Then we will host the site on Heroku or AWS or Google and start letting users play with it.
+
+# Future version user stories - Target October through December
 * Users should be able to screen for stocks using common and not so
 common metrics for evaluating stocks.  
-  * A minimum of 100 common metrics like P/E and Marketcap.
-  * A minimum of 30 uncommon metrics like EV/EBITDA and insider buying.
+  * A minimum of 30 common metrics like P/E and MarketCap.
+  * A minimum of 10 uncommon metrics like EBITDA growth and net insider purchases.
 
 # Way in the future user stories
 * Users should be able to visualize common relevant data instantly.
@@ -49,7 +51,7 @@ common metrics for evaluating stocks.
   * Users should be able to instantly and visually see if a stock is perhaps
   over/undervalued.
 
-# Waaaaaaay in the future user stories:
+# Waaaaaaay way in the future user stories:
 * Users should have access to news.
 * Users should have access to common sense (why did the stock pop/drop today?)
 
