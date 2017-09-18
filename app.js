@@ -4,7 +4,7 @@ var avApikey = config.avApikey;
 var alphaVantageUrl = "https://www.alphavantage.co/query?";
 var daily = "function=TIME_SERIES_DAILY";
 var intraday = "function=TIME_SERIES_INTRADAY";
-//nafissa's fork
+//trying to create a conflict 
 function testApi(){
   $.ajax({
     url: alphaVantageUrl + intraday + "&symbol=MSFT&interval=1min&apikey=" + avApikey,
