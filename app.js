@@ -5,6 +5,7 @@ var alphaVantageUrl = "https://www.alphavantage.co/query?";
 var daily = "function=TIME_SERIES_DAILY";
 var intraday = "function=TIME_SERIES_INTRADAY";
 
+// alpha vantage
 // intrinio
 // quandl
 // xignite
