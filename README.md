@@ -28,6 +28,9 @@ Please see the GURUfocus site for an example of what I'd like to do eventually.
 https://www.gurufocus.com/screener/#&tab=9&page=1&sort=&dir=&stab=-
 Click on the valuation tab to see where they use EV and EBITDA in their screeners.
 
+# An initial mockup of version 1
+
+
 
 
 

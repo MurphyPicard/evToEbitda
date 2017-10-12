@@ -5,6 +5,11 @@ var alphaVantageUrl = "https://www.alphavantage.co/query?";
 var daily = "function=TIME_SERIES_DAILY";
 var intraday = "function=TIME_SERIES_INTRADAY";
 
+// intrinio
+// quandl
+// xignite
+// need to find a free and full feature option
+
 function testApi(){
   $.ajax({
     url: alphaVantageUrl + intraday + "&symbol=MSFT&interval=1min&apikey=" + avApikey,
@@ -44,7 +49,7 @@ function testApiPrice(){
 var intrinioUsername = config.intrinioUsername; // stored in the config.js file
 var intrinioPassword = config.intrinioPassword; // stored in the config.js file
 var auth = "Basic " + btoa(intrinioUsername + ":" + intrinioPassword); // instead of apikey
-var intrinioUrl = 'https://api.intrinio.com/fundamentals/standardized?identifier=FB&statement=income_statement';
+var intrinioUrl = 'https://api.intrinio.com/companies?query&page_size=987&page_number=81';
 
 function shareCount(){
   $.ajax({
