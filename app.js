@@ -4,7 +4,8 @@ var avApikey = config.avApikey;
 var alphaVantageUrl = "https://www.alphavantage.co/query?";
 var daily = "function=TIME_SERIES_DAILY";
 var intraday = "function=TIME_SERIES_INTRADAY";
-
+var testMe = 3;
+console.log(testMe);
 // alpha vantage
 // intrinio
 // quandl
